@@ -1,8 +1,8 @@
 /**@jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import * as React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { UseRefPage } from './pages/useRef/template';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Routes } from './constants/routes';
 import { HomePage } from './pages/home/template';
 
 const App: React.FC = () => {
@@ -24,9 +24,11 @@ const App: React.FC = () => {
           <Route path='/' exact>
             <HomePage />
           </Route>
-          <Route path='/useRef' exact>
-            <UseRefPage />
-          </Route>
+          {Routes.map(({ to, name, PageComponent }) => (
+            <Route key={name} path={to} exact>
+              <PageComponent />
+            </Route>
+          ))}
         </Switch>
       </div>
     </BrowserRouter>

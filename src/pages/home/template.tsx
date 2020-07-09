@@ -1,16 +1,19 @@
 import * as React from 'react';
 import { StyledLink } from '../../components/atoms/StyledLink';
+import { Routes } from '../../constants/routes';
 
 export const HomePage: React.FC = () => {
   return (
     <div>
       <h1>Learning React</h1>
       <ul>
-        <li>
-          <StyledLink to='/useRef' className='Page-link'>
-            useRef
-          </StyledLink>
-        </li>
+        {Routes.map(({ to, name }) => (
+          <li key={name}>
+            <StyledLink to={to} className='Page-link'>
+              {name}
+            </StyledLink>
+          </li>
+        ))}
       </ul>
     </div>
   );

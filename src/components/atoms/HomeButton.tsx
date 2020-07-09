@@ -1,6 +1,6 @@
-import * as React from 'react';
 /**@jsx jsx */
 import { jsx, css } from '@emotion/core';
+import * as React from 'react';
 import { StyledLink } from './StyledLink';
 
 export const HomeButton: React.FC = () => {
@@ -12,7 +12,7 @@ export const HomeButton: React.FC = () => {
         left: 2em;
       `}
     >
-      <StyledLink to='/'>Go Home</StyledLink>
+      <StyledLink to='/'>Home</StyledLink>
     </div>
   );
 };
