@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { UseEffectPage } from '../pages/useRef/template';
+import { UseEffectPage } from '../pages/useEffect/template';
 
 export const Routes: {
   to: string;
