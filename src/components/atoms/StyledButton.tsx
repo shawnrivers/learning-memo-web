@@ -1,6 +1,7 @@
 /**@jsx jsx */
 import { jsx, css } from '@emotion/core';
 import * as React from 'react';
+import { BLUE_0, BLUE_1 } from '../../constants/colors';
 
 export const StyledButton: React.FC<React.HTMLAttributes<HTMLButtonElement>> = (
   props
@@ -9,14 +10,14 @@ export const StyledButton: React.FC<React.HTMLAttributes<HTMLButtonElement>> = (
   return (
     <button
       css={css`
-        color: white;
-        border: 1px white solid;
+        color: ${BLUE_0};
+        border: 1px ${BLUE_0} solid;
         border-radius: 8px;
         padding: 1.5ex;
         margin: 1ex;
 
         &:hover {
-          background-color: #888888;
+          background-color: ${BLUE_1};
         }
       `}
       {...restProps}

@@ -40,7 +40,6 @@ export const UseEffectPage: React.FC = () => {
         >
           Increment State
         </StyledButton>
-        <br />
         <StyledButton
           onClick={() => {
             counterRef.current++;
@@ -48,7 +47,6 @@ export const UseEffectPage: React.FC = () => {
         >
           Increment Ref
         </StyledButton>
-        <br />
         <StyledButton
           onClick={() => {
             setCounter(0);
