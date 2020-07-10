@@ -1,7 +1,7 @@
 /**@jsx jsx */
 import { jsx, css } from '@emotion/core';
 import * as React from 'react';
-import { BLUE_0, BLUE_1 } from '../../constants/colors';
+import { BLUE_0, BLUE_1 } from '../../../constants/colors';
 
 export const StyledButton: React.FC<React.HTMLAttributes<HTMLButtonElement>> = (
   props

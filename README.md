@@ -1,3 +1,3 @@
-# Learning React
+# Learning Memo
 
-My codes memo when learning React
+My codes memo when learning React, CSS

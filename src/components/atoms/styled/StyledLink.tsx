@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core';
 import * as React from 'react';
 import { Link, LinkProps } from 'react-router-dom';
-import { BLUE_0 } from '../../constants/colors';
+import { BLUE_0 } from '../../../constants/colors';
 
 export const StyledLink: React.FC<React.PropsWithoutRef<
   LinkProps & React.RefAttributes<HTMLAnchorElement>

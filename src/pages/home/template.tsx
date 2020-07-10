@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { StyledLink } from '../../components/atoms/StyledLink';
-import { Routes } from '../../constants/routes';
+import { StyledLink } from '../../components/atoms/styled/StyledLink';
+import { homeRoutes } from '../../constants/routes';
 
 export const HomePage: React.FC = () => {
   return (
     <div>
-      <h1>Learning React</h1>
+      <h1>Learning Memo</h1>
       <ul>
-        {Routes.map(({ to, name }) => (
+        {homeRoutes.map(({ to, name }) => (
           <li key={name}>
             <StyledLink to={to} className='Page-link'>
               {name}

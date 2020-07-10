@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { HomeButton } from '../../components/atoms/HomeButton';
-import { StyledButton } from '../../components/atoms/StyledButton';
+import { BackButton } from '../../../components/atoms/buttons/BackButton';
+import { StyledButton } from '../../../components/atoms/styled/StyledButton';
+import { Layout } from '../../../components/templates/Layout';
 
 export const UseEffectPage: React.FC = () => {
   const [counter, setCounter] = React.useState(0);
@@ -27,8 +28,7 @@ export const UseEffectPage: React.FC = () => {
   }, [counterRef]);
 
   return (
-    <div>
-      <HomeButton />
+    <Layout headerButton={<BackButton />}>
       <h1>useEffect deps on state & ref</h1>
       <div>
         <h3>Counter State: {counter}</h3>
@@ -56,6 +56,6 @@ export const UseEffectPage: React.FC = () => {
           Reset
         </StyledButton>
       </div>
-    </div>
+    </Layout>
   );
 };
