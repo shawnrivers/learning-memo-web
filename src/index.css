@@ -45,3 +45,7 @@ button {
   outline: initial;
   padding: 0;
 }
+
+li {
+  margin: 1ex 0;
+}

@@ -3,7 +3,7 @@ import { jsx, css } from '@emotion/core';
 import * as React from 'react';
 import { BackButton } from '../atoms/buttons/BackButton';
 
-type LayoutProps = {
+export type LayoutProps = {
   headerButton?: React.ReactNode;
 };
 

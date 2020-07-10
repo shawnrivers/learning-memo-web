@@ -2,10 +2,10 @@
 import { css, jsx } from '@emotion/core';
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { homeRoutes, learningReactRoutes } from './constants/routes';
+import { homeRoutes, learningCssRoutes, learningReactRoutes } from './constants/routes';
 import { HomePage } from './pages/home/template';
 
-const routes = [...homeRoutes, ...learningReactRoutes];
+const routes = [...homeRoutes, ...learningReactRoutes, ...learningCssRoutes];
 
 const App: React.FC = () => {
   return (
