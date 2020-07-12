@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { LearningProjectPage } from '../../components/templates/LearningProjectPage';
+import { ProjectPage } from '../../components/templates/ProjectPage';
 import { learningReactRoutes } from '../../constants/routes';
 
 export const LearningReactPage: React.FC = () => {
   return (
-    <LearningProjectPage
+    <ProjectPage
       heading='Learning React'
       routes={learningReactRoutes}
     />

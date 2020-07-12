@@ -4,12 +4,12 @@ import { HomeButton } from '../atoms/buttons/HomeButton';
 import { StyledLink } from '../atoms/styled/StyledLink';
 import { Layout } from './Layout';
 
-type LearningProjectLayoutProps = {
+type ProjectPageProps = {
   heading: string;
   routes: RouteType[];
 };
 
-export const LearningProjectPage: React.FC<LearningProjectLayoutProps> = (
+export const ProjectPage: React.FC<ProjectPageProps> = (
   props
 ) => {
   return (

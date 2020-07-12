@@ -1,9 +1,8 @@
 /**@jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import * as React from 'react';
-import { BackButton } from '../../../components/atoms/buttons/BackButton';
-import { Layout } from '../../../components/templates/Layout';
+import { TopicPage } from '../../../components/templates/TopicPage';
 
 const Container = styled.div`
   background-color: #f39d9dcc;
@@ -18,9 +17,7 @@ const contentStyles = css`
 
 export const BoxModelPage: React.FC = () => {
   return (
-    <Layout headerButton={<BackButton />}>
-      <h1>Box Model</h1>
-
+    <TopicPage heading='Box Model'>
       <h2>Default Width of block level boxes</h2>
       <h3>div with default width</h3>
       <Container>
@@ -117,6 +114,6 @@ export const BoxModelPage: React.FC = () => {
           These are a lot of characters.
         </div>
       </Container>
-    </Layout>
+    </TopicPage>
   );
 };

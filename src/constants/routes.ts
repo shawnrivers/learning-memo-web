@@ -2,6 +2,7 @@ import * as React from 'react';
 import { LearningCssPage } from '../pages/learningCSS';
 import { BoxModelPage } from '../pages/learningCSS/boxModel/template';
 import { LearningReactPage } from '../pages/learningReact';
+import { RenderingPage } from '../pages/learningReact/rendering/template';
 import { UseEffectPage } from '../pages/learningReact/useEffect/template';
 
 export type RouteType = {
@@ -28,6 +29,11 @@ export const learningReactRoutes: RouteType[] = [
     to: '/react/useEffect',
     name: 'useEffect',
     PageComponent: UseEffectPage,
+  },
+  {
+    to: '/react/rendering',
+    name: 'Rendering',
+    PageComponent: RenderingPage,
   },
 ];
 
