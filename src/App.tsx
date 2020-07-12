@@ -2,10 +2,8 @@
 import { css, jsx } from '@emotion/core';
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { homeRoutes, learningCssRoutes, learningReactRoutes } from './constants/routes';
+import { allRoutes } from './constants/routes';
 import { HomePage } from './pages/home/template';
-
-const routes = [...homeRoutes, ...learningReactRoutes, ...learningCssRoutes];
 
 const App: React.FC = () => {
   return (
@@ -26,7 +24,7 @@ const App: React.FC = () => {
           <Route path='/' exact>
             <HomePage />
           </Route>
-          {routes.map(({ to, name, PageComponent }) => (
+          {allRoutes.map(({ to, name, PageComponent }) => (
             <Route key={name} path={to} exact>
               <PageComponent />
             </Route>
