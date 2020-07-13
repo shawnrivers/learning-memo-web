@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { LearningCssPage } from '../pages/learningCSS';
-import { BoxModelPage } from '../pages/learningCSS/boxModel/template';
-import { LearningJSPage } from '../pages/learningJS';
-import { ReferencePage } from '../pages/learningJS/reference/template';
-import { LearningReactPage } from '../pages/learningReact';
-import { RenderingPage } from '../pages/learningReact/rendering/template';
-import { UseEffectPage } from '../pages/learningReact/useEffect/template';
+import LearningCssPage from '../pages/learningCSS';
+import BoxModelPage from '../pages/learningCSS/boxModel/template';
+import LearningJSPage from '../pages/learningJS';
+import ReferencePage from '../pages/learningJS/reference/template';
+import LearningReactPage from '../pages/learningReact';
+import RenderingPage from '../pages/learningReact/rendering/template';
+import UseEffectPage from '../pages/learningReact/useEffect/template';
 
 export type RouteType = {
   to: string;

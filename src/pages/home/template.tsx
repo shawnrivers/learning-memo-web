@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StyledLink } from '../../components/atoms/styled/StyledLink';
 import { homeRoutes } from '../../constants/routes';
 
-export const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <div>
       <h1>Learning Memo</h1>
@@ -18,3 +18,5 @@ export const HomePage: React.FC = () => {
     </div>
   );
 };
+
+export default HomePage;

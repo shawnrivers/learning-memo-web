@@ -11,7 +11,7 @@ const obj2 = {
   b: '2',
 };
 
-export const ReferencePage: React.FC = () => {
+const ReferencePage: React.FC = () => {
   return (
     <TopicPage heading='Reference'>
       <p>
@@ -29,3 +29,5 @@ export const ReferencePage: React.FC = () => {
     </TopicPage>
   );
 };
+
+export default ReferencePage;

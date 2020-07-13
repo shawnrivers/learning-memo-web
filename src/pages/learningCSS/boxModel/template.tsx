@@ -15,7 +15,7 @@ const contentStyles = css`
   padding: 8px;
 `;
 
-export const BoxModelPage: React.FC = () => {
+const BoxModelPage: React.FC = () => {
   return (
     <TopicPage heading='Box Model'>
       <h2>Default Width of block level boxes</h2>
@@ -117,3 +117,5 @@ export const BoxModelPage: React.FC = () => {
     </TopicPage>
   );
 };
+
+export default BoxModelPage;

@@ -2,9 +2,8 @@ import * as React from 'react';
 import { StyledButton } from '../../../components/atoms/styled/StyledButton';
 import { TopicPage } from '../../../components/templates/TopicPage';
 
-export const UseEffectPage: React.FC = () => {
+const UseEffectPage: React.FC = () => {
   const [counter, setCounter] = React.useState(0);
-  const [invisibleCounter, setInvisibleCounter] = React.useState(0);
   const counterRef = React.useRef(0);
 
   React.useEffect(() => {
@@ -56,14 +55,9 @@ export const UseEffectPage: React.FC = () => {
             Reset
           </StyledButton>
         </div>
-        <div>
-          <StyledButton
-            onClick={() => setInvisibleCounter(invisibleCounter + 1)}
-          >
-            Increment invisible counter
-          </StyledButton>
-        </div>
       </div>
     </TopicPage>
   );
 };
+
+export default UseEffectPage;
