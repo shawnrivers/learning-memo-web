@@ -1,10 +1,23 @@
 import * as React from 'react';
+import { StyledButton } from '../../components/atoms/styled/StyledButton';
 import { StyledLink } from '../../components/atoms/styled/StyledLink';
+import { Layout } from '../../components/templates/Layout';
 import { homeRoutes } from '../../constants/routes';
 
-const HomePage: React.FC = () => {
+export type HomePageProps = {
+  isCodeSplitOn: boolean;
+  onSwitchCodeSplit(): void;
+};
+
+const HomePage: React.FC<HomePageProps> = (props) => {
   return (
-    <div>
+    <Layout
+      headerButton={
+        <StyledButton onClick={props.onSwitchCodeSplit}>
+          Code Split {!props.isCodeSplitOn ? 'ON' : 'OFF'}
+        </StyledButton>
+      }
+    >
       <h1>Learning Memo</h1>
       <ul>
         {homeRoutes.map(({ to, name }) => (
@@ -15,7 +28,7 @@ const HomePage: React.FC = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   );
 };
 
