@@ -2,6 +2,7 @@ import * as React from 'react';
 import LearningCssPage from '../pages/learningCSS';
 import BoxModelPage from '../pages/learningCSS/boxModel/template';
 import LearningJSPage from '../pages/learningJS';
+import IntersectionObserverPage from '../pages/learningJS/intersectionObserver/template';
 import ReferencePage from '../pages/learningJS/reference/template';
 import LearningReactPage from '../pages/learningReact';
 import RenderingPage from '../pages/learningReact/rendering/template';
@@ -23,6 +24,9 @@ const RenderingPageLazy = React.lazy(() =>
 );
 const UseEffectPageLazy = React.lazy(() =>
   import('../pages/learningReact/useEffect/template')
+);
+const IntersectionObserverPageLazy = React.lazy(() =>
+  import('../pages/learningJS/intersectionObserver/template')
 );
 
 export type RouteType = {
@@ -74,6 +78,12 @@ export const learningJSRoutes: RouteType[] = [
     name: 'Reference',
     PageComponent: ReferencePage,
     PageComponentLazy: ReferencePageLazy,
+  },
+  {
+    to: '/js/intersection-observer',
+    name: 'Intersection Observer',
+    PageComponent: IntersectionObserverPage,
+    PageComponentLazy: IntersectionObserverPageLazy,
   },
 ];
 

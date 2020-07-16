@@ -27,6 +27,7 @@ export const useIntersectionObserver = ({
         }
       });
     };
+
     const observer = new IntersectionObserver(intersectionCallback, options);
 
     if (elementRef.current) {
