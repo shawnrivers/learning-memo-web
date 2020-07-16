@@ -9,7 +9,9 @@ export type LayoutProps = {
 
 export const Layout: React.FC<LayoutProps> = (props) => {
   return (
-    <div>
+    <div css={css`
+      margin-bottom: 64px;
+    `}>
       <div
         css={css`
           position: absolute;
