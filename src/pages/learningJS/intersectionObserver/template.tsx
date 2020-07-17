@@ -13,8 +13,15 @@ const IntersectionObserverPage: React.FC = () => {
 
   useIntersectionObserver({
     elementRef: cardOneRef,
-    callbackOnIntersecting: () => setIsCardOneIntersecting(true),
-    callbackOnNotIntersecting: () => setIsCardOneIntersecting(false),
+    callbackOnEntry: (entry) => {
+      console.log("Is intersecting:", entry.isIntersecting);
+
+      if (entry.isIntersecting) {
+        setIsCardOneIntersecting(true);
+      } else {
+        setIsCardOneIntersecting(false);
+      }
+    },
   });
 
   return (
@@ -25,14 +32,14 @@ const IntersectionObserverPage: React.FC = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-top: 1600px;
+          margin: 1600px 0;
         `}
       >
         <div
           ref={cardOneRef}
           css={css`
             width: 200px;
-            height: 200px;
+            height: 400px;
             border-radius: 16px;
             background-color: ${isCardOneIntersecting ? BLUE_0 : GRAY_0};
             transition: background-color 1s ease-in-out;

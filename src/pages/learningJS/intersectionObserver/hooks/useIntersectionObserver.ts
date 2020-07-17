@@ -3,28 +3,18 @@ import * as React from 'react';
 type useIntersectionObserverParams = {
   elementRef: React.RefObject<HTMLElement>;
   options?: IntersectionObserverInit;
-  callbackOnIntersecting(): void;
-  callbackOnNotIntersecting?(): void;
+  callbackOnEntry(entry: IntersectionObserverEntry): void;
 };
 
 export const useIntersectionObserver = ({
   elementRef,
   options,
-  callbackOnIntersecting,
-  callbackOnNotIntersecting,
+  callbackOnEntry,
 }: useIntersectionObserverParams) => {
   React.useEffect(() => {
     const intersectionCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
-        console.log('Is intersecting?', entry.isIntersecting);
-
-        if (entry.isIntersecting) {
-          callbackOnIntersecting();
-        } else {
-          if (callbackOnNotIntersecting) {
-            callbackOnNotIntersecting();
-          }
-        }
+        callbackOnEntry(entry);
       });
     };
 
