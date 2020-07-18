@@ -5,6 +5,7 @@ import LearningJSPage from '../pages/learningJS';
 import IntersectionObserverPage from '../pages/learningJS/intersectionObserver/template';
 import ReferencePage from '../pages/learningJS/reference/template';
 import LearningReactPage from '../pages/learningReact';
+import ContextPage from '../pages/learningReact/context/template';
 import RenderingPage from '../pages/learningReact/rendering/template';
 import UseEffectPage from '../pages/learningReact/useEffect/template';
 
@@ -24,6 +25,9 @@ const RenderingPageLazy = React.lazy(() =>
 );
 const UseEffectPageLazy = React.lazy(() =>
   import('../pages/learningReact/useEffect/template')
+);
+const ContextPageLazy = React.lazy(() =>
+  import('../pages/learningReact/context/template')
 );
 const IntersectionObserverPageLazy = React.lazy(() =>
   import('../pages/learningJS/intersectionObserver/template')
@@ -69,6 +73,12 @@ export const learningReactRoutes: RouteType[] = [
     name: 'Rendering',
     PageComponent: RenderingPage,
     PageComponentLazy: RenderingPageLazy,
+  },
+  {
+    to: '/react/context',
+    name: 'Context',
+    PageComponent: ContextPage,
+    PageComponentLazy: ContextPageLazy,
   },
 ];
 
