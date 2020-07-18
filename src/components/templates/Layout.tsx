@@ -10,7 +10,7 @@ export type LayoutProps = {
 export const Layout: React.FC<LayoutProps> = (props) => {
   return (
     <div css={css`
-      margin-bottom: 64px;
+      margin: 24px 24px 64px;
     `}>
       <div
         css={css`
