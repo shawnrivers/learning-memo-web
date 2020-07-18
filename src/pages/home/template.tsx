@@ -14,7 +14,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
     <Layout
       headerButton={
         <StyledButton onClick={props.onSwitchCodeSplit}>
-          Code Split {!props.isCodeSplitOn ? 'ON' : 'OFF'}
+          Turn {!props.isCodeSplitOn ? 'on' : 'off'} Code Split
         </StyledButton>
       }
     >
