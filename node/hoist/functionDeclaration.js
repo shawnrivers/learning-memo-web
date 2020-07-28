@@ -1,5 +1,6 @@
-hello(); // function declaration hoist
+hello(); // hello!
 
+// function declarations hoist
 function hello() {
-  console.log('hello');
+  console.log('hello!');
 }
