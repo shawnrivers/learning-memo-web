@@ -2,3 +2,4 @@ node_modules/
 .vscode/
 .next
 next-env.d.ts
+.DS_Store
