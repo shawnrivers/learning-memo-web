@@ -1,18 +1,28 @@
 import * as React from 'react';
 import { TopicPage } from '../../components/templates/TopicPage';
 
+async function handlePromise<T>(promise: Promise<T>): Promise<T> {
+  try {
+    const result = await promise;
+    console.log('[handlePromise] result:', result);
+    return result;
+  } catch (error) {
+    console.error('[handlePromise] error:', error);
+  }
+}
+
 const ReferencePage: React.FC = () => {
   const [promiseStatus, setPromiseStatus] = React.useState<
     'none' | 'pending' | 'rejected' | 'resolved'
   >('none');
 
   React.useEffect(() => {
-    const promise = new Promise((resolve, reject) => {
+    const promise = new Promise<string>((resolve, reject) => {
       setPromiseStatus('pending');
       setTimeout(() => {
         // resolve('done');
         reject('failed');
-      }, 3000);
+      }, 2000);
     });
 
     promise
@@ -24,6 +34,8 @@ const ReferencePage: React.FC = () => {
         setPromiseStatus('rejected');
         console.error('Error:', error);
       });
+
+    handlePromise(promise);
   }, []);
 
   return (
