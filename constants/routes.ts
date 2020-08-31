@@ -50,6 +50,10 @@ export const learningJSRoutes: RouteType[] = [
     to: '/js/promise',
     name: 'Promise',
   },
+  {
+    to: '/js/generators',
+    name: 'Generators',
+  },
 ];
 
 export const learningCssRoutes: RouteType[] = [
