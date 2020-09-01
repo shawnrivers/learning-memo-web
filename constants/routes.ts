@@ -35,6 +35,10 @@ export const learningReactRoutes: RouteType[] = [
     to: '/react/suspense',
     name: 'Suspense',
   },
+  {
+    to: '/react/ref',
+    name: 'Ref',
+  },
 ];
 
 export const learningJSRoutes: RouteType[] = [
