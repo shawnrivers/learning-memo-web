@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core';
 import * as React from 'react';
 import Link from 'next/link';
-import { BLUE_0 } from '../../../constants/colors';
+import { BLUE_1 } from '../../../constants/colors';
 
 type LinkProps = React.ComponentProps<typeof Link>;
 
@@ -12,19 +12,20 @@ export const StyledLink: React.FC<React.PropsWithoutRef<
   const { href, children, ...restProps } = props;
 
   return (
-    <Link
-      href={href}
-      css={css`
-        font-size: 1.5rem;
-        color: ${BLUE_0};
+    <Link href={href} {...restProps}>
+      <a
+        css={css`
+          font-size: 1.2rem;
+          color: ${BLUE_1};
 
-        &:hover {
-          text-decoration: underline;
-        }
-      `}
-      {...restProps}
-    >
-      <a>{children}</a>
+          &:hover {
+            text-decoration: underline;
+            pointer-events: auto;
+          }
+        `}
+      >
+        {children}
+      </a>
     </Link>
   );
 };
