@@ -39,6 +39,10 @@ export const learningReactRoutes: RouteType[] = [
     to: '/react/ref',
     name: 'Ref',
   },
+  {
+    to: '/react/hierarchy',
+    name: 'Hierarchy',
+  },
 ];
 
 export const learningJSRoutes: RouteType[] = [
