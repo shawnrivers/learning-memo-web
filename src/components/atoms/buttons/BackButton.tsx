@@ -14,6 +14,7 @@ export const BackButton: React.FC<React.HTMLAttributes<HTMLButtonElement>> = (
       css={css`
         &:hover {
           text-decoration: underline;
+          cursor: pointer;
         }
       `}
       onClick={router.back}

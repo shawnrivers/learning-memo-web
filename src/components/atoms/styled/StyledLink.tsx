@@ -20,7 +20,7 @@ export const StyledLink: React.FC<React.PropsWithoutRef<
 
           &:hover {
             text-decoration: underline;
-            pointer-events: auto;
+            cursor: pointer;
           }
         `}
       >
