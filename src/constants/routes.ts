@@ -16,6 +16,10 @@ export const homeRoutes: RouteType[] = [
     to: '/css',
     name: 'CSS',
   },
+  {
+    to: '/next',
+    name: 'Next.js',
+  },
 ];
 
 export const learningReactRoutes: RouteType[] = [
@@ -71,9 +75,9 @@ export const learningCssRoutes: RouteType[] = [
   },
 ];
 
-export const allRoutes = [
-  ...homeRoutes,
-  ...learningReactRoutes,
-  ...learningJSRoutes,
-  ...learningCssRoutes,
+export const learningNextRoutes: RouteType[] = [
+  {
+    to: '/next/routes',
+    name: 'Routes',
+  },
 ];
