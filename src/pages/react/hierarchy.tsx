@@ -4,6 +4,10 @@ import { TopicPage } from '../../components/templates/TopicPage';
 const Child: React.FC = () => {
   console.log('[Child] function body');
 
+  React.useEffect(() => {
+    console.log('[Child] effect');
+  });
+
   return (
     <div>
       {console.log('[Child] return')}
@@ -14,6 +18,10 @@ const Child: React.FC = () => {
 
 const Parent: React.FC = (props) => {
   console.log('[Parent] function body');
+
+  React.useEffect(() => {
+    console.log('[Parent] effect');
+  });
 
   return (
     <div>
@@ -34,5 +42,7 @@ const HierarchyPage: React.FC = () => {
     </TopicPage>
   );
 };
+
+console.log(Parent);
 
 export default HierarchyPage;

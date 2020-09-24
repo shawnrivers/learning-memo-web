@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Divider } from '../../../components/atoms/Divider';
-import { StyledButton } from '../../../components/atoms/styled/StyledButton';
-import { TopicPage } from '../../../components/templates/TopicPage';
+import { Divider } from '../../atoms/Divider';
+import { StyledButton } from '../../atoms/styled/StyledButton';
+import { TopicPage } from '../TopicPage';
 import { PostsFetchAfterRender } from './components/PostsFetchAfterRender';
 import { PostsFetchBeforeRender } from './components/PostsFetchBeforeRender';
 import { ErrorBoundary } from './components/ErrorBoundary';
