@@ -8,7 +8,10 @@ const notes = new Array(5)
 
 const NextRoutesPage: React.FC = () => {
   return (
-    <TopicPage heading='Routes'>
+    <TopicPage
+      heading='Routes'
+      headerButton={<StyledLink href='/next'>Next.js</StyledLink>}
+    >
       <section>
         <h2>First Way</h2>
         <ul>

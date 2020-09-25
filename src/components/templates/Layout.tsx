@@ -14,7 +14,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
         margin: 24px 24px 64px;
       `}
     >
-      <div>{props.headerButton ?? <BackButton />}</div>
+      <nav>{props.headerButton ?? <BackButton />}</nav>
       {props.children}
     </div>
   );

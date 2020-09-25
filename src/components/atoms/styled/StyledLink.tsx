@@ -6,13 +6,11 @@ import { BLUE_1 } from '../../../constants/colors';
 
 type LinkProps = React.ComponentProps<typeof Link>;
 
-export const StyledLink: React.FC<LinkProps> = (
-  props
-) => {
-  const { href, children, ...restProps } = props;
+export const StyledLink: React.FC<LinkProps> = (props) => {
+  const { children, ...restProps } = props;
 
   return (
-    <Link href={href} {...restProps}>
+    <Link {...restProps}>
       <a
         css={css`
           font-size: 1.2rem;
