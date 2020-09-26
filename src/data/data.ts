@@ -4,6 +4,6 @@ export type Note = {
 };
 
 export const notes: Note[] = new Array(15).fill(1).map((_, i) => ({
-  id: Date.now() + i,
+  id: i,
   title: `Note ${i}`,
 }));

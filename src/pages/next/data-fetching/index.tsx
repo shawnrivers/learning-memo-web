@@ -13,8 +13,15 @@ const DataFetchingPage: React.FC<Props> = (props) => {
       headerButton={<StyledLink href='/next'>Back to Next.js</StyledLink>}
     >
       <ul>
-        {props.data.notes.data.map((note) => (
-          <li key={note.id}>{note.title}</li>
+        {props.data.notes.map((note) => (
+          <li key={note.id}>
+            <StyledLink
+              href='/next/data-fetching/[id]'
+              as={`/next/data-fetching/${note.id}`}
+            >
+              {note.title}
+            </StyledLink>
+          </li>
         ))}
       </ul>
     </TopicPage>
@@ -25,15 +32,13 @@ export default DataFetchingPage;
 
 type Props = {
   data: {
-    notes: {
-      data: Note[];
-    };
+    notes: Note[];
   };
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const response = await fetch('http://localhost:3000/api/note');
-  const data: { data: Note[] } = await response.json();
+  const { data } = await response.json();
 
   return {
     props: {
