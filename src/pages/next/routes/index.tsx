@@ -10,7 +10,7 @@ const NextRoutesPage: React.FC = () => {
   return (
     <TopicPage
       heading='Routes'
-      headerButton={<StyledLink href='/next'>Next.js</StyledLink>}
+      headerButton={<StyledLink href='/next'>Back to Next.js</StyledLink>}
     >
       <section>
         <h2>First Way</h2>

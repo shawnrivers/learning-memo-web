@@ -80,4 +80,8 @@ export const learningNextRoutes: RouteType[] = [
     to: '/next/routes',
     name: 'Routes',
   },
+  {
+    to: '/next/data-fetching',
+    name: 'Data Fetching',
+  },
 ];
