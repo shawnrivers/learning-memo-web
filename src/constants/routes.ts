@@ -1,9 +1,9 @@
-export type RouteType = {
+export type Route = {
   to: string;
   name: string;
 };
 
-export const homeRoutes: RouteType[] = [
+export const homeRoutes: Route[] = [
   {
     to: '/react',
     name: 'React',
@@ -20,9 +20,13 @@ export const homeRoutes: RouteType[] = [
     to: '/next',
     name: 'Next.js',
   },
+  {
+    to: '/framer',
+    name: 'Framer Motion',
+  },
 ];
 
-export const learningReactRoutes: RouteType[] = [
+export const learningReactRoutes: Route[] = [
   {
     to: '/react/useEffect',
     name: 'useEffect',
@@ -49,7 +53,7 @@ export const learningReactRoutes: RouteType[] = [
   },
 ];
 
-export const learningJSRoutes: RouteType[] = [
+export const learningJSRoutes: Route[] = [
   {
     to: '/js/reference',
     name: 'Reference',
@@ -68,14 +72,14 @@ export const learningJSRoutes: RouteType[] = [
   },
 ];
 
-export const learningCssRoutes: RouteType[] = [
+export const learningCssRoutes: Route[] = [
   {
     to: '/css/box-model',
     name: 'Box Model',
   },
 ];
 
-export const learningNextRoutes: RouteType[] = [
+export const learningNextRoutes: Route[] = [
   {
     to: '/next/routes',
     name: 'Routes',
@@ -83,5 +87,12 @@ export const learningNextRoutes: RouteType[] = [
   {
     to: '/next/data-fetching',
     name: 'Data Fetching',
+  },
+];
+
+export const learningFramerMotionRoutes: Route[] = [
+  {
+    to: '/framer/drag',
+    name: 'Drag',
   },
 ];

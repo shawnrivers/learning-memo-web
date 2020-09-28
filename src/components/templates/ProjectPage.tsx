@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { RouteType } from '../../constants/routes';
+import { Route } from '../../constants/routes';
 import { HomeButton } from '../atoms/buttons/HomeButton';
 import { StyledLink } from '../atoms/styled/StyledLink';
 import { Layout } from './Layout';
 
 type ProjectPageProps = {
   heading: string;
-  routes: RouteType[];
+  routes: Route[];
 };
 
 export const ProjectPage: React.FC<ProjectPageProps> = (props) => {
