@@ -11,7 +11,6 @@ export const StyledButton: React.FC<React.HTMLAttributes<HTMLButtonElement>> = (
       css={css`
         border-radius: 8px;
         padding: 1.5ex;
-        margin: 1ex;
       `}
       {...restProps}
     >

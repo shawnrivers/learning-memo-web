@@ -70,6 +70,10 @@ export const learningJSRoutes: Route[] = [
     to: '/js/generators',
     name: 'Generators',
   },
+  {
+    to: '/js/canvas',
+    name: 'Canvas',
+  },
 ];
 
 export const learningCssRoutes: Route[] = [
