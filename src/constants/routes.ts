@@ -5,16 +5,20 @@ export type Route = {
 
 export const homeRoutes: Route[] = [
   {
-    to: '/react',
-    name: 'React',
+    to: '/html',
+    name: 'HTML',
+  },
+  {
+    to: '/css',
+    name: 'CSS',
   },
   {
     to: '/js',
     name: 'JavaScript',
   },
   {
-    to: '/css',
-    name: 'CSS',
+    to: '/react',
+    name: 'React',
   },
   {
     to: '/next',
@@ -102,5 +106,12 @@ export const learningFramerMotionRoutes: Route[] = [
   {
     to: '/framer/drag',
     name: 'Drag',
+  },
+];
+
+export const learningHTMLRoutes: Route[] = [
+  {
+    to: '/html/table',
+    name: 'Table',
   },
 ];

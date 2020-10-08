@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
     "framer-motion": "^2.7.5",
     "next": "^9.5.2",
     "next-connect": "^0.9.0",
