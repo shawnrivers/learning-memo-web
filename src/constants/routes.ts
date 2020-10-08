@@ -81,6 +81,10 @@ export const learningCssRoutes: Route[] = [
     to: '/css/box-model',
     name: 'Box Model',
   },
+  {
+    to: '/css/percentage',
+    name: 'Percentage',
+  },
 ];
 
 export const learningNextRoutes: Route[] = [
