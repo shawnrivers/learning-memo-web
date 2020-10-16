@@ -89,6 +89,10 @@ export const learningCssRoutes: Route[] = [
     to: '/css/percentage',
     name: 'Percentage',
   },
+  {
+    to: '/css/float',
+    name: 'Float',
+  },
 ];
 
 export const learningNextRoutes: Route[] = [
