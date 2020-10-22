@@ -1,18 +1,29 @@
 import * as React from 'react';
 
+type ErrorBoundaryProps = {
+  fallback: React.ReactNode;
+};
+
+type ErrorBoundaryState = {
+  hasError: boolean;
+};
+
 export class ErrorBoundary extends React.Component<
-  {
-    fallback: React.ReactNode;
-  },
-  { hasError: boolean; error: Error | null }
+  ErrorBoundaryProps,
+  ErrorBoundaryState
 > {
-  state = { hasError: false, error: null };
+  state = { hasError: false };
+
   static getDerivedStateFromError(error: Error) {
     return {
       hasError: true,
-      error,
     };
   }
+
+  componentDidCatch(error) {
+    console.error('[ErrorBoundary] Error caught:', error);
+  }
+
   render() {
     if (this.state.hasError) {
       return this.props.fallback;
