@@ -37,7 +37,7 @@ export type Post = {
   text: string;
 };
 
-function fetchPosts(): Promise<Post[]> {
+export function fetchPosts(): Promise<Post[]> {
   console.log('fetch posts...');
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -60,32 +60,19 @@ function fetchPosts(): Promise<Post[]> {
   });
 }
 
-function rejectPosts(): Promise<Post[]> {
+export function fetchPostsReject(): Promise<Post[]> {
   console.log('fetch posts...');
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log('rejected posts');
-      reject([
-        {
-          id: 0,
-          text: 'I get by with a little help from my friends',
-        },
-        {
-          id: 1,
-          text: "I'd like to be under the sea in an octupus's garden",
-        },
-        {
-          id: 2,
-          text: 'You got that sand all over your feet',
-        },
-      ]);
+      reject(new Error('Error happens when fetching posts'));
     }, 2000);
   });
 }
 
 export function fetchProfileData() {
   const postsPromise = fetchPosts();
-  const postsPromiseReject = rejectPosts();
+  const postsPromiseReject = fetchPostsReject();
   return {
     posts: wrapPromise(postsPromise),
     portsReject: wrapPromise(postsPromiseReject),
@@ -98,6 +85,6 @@ export function fetchPostsData() {
 }
 
 export function fetchPostsRejectData() {
-  const promise = rejectPosts();
+  const promise = fetchPostsReject();
   return wrapPromise(promise);
 }

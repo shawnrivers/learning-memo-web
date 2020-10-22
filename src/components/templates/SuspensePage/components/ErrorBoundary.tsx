@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 type ErrorBoundaryProps = {
-  fallback: React.ReactNode;
+  fallback?: React.ReactNode;
 };
 
 type ErrorBoundaryState = {
@@ -13,6 +13,10 @@ export class ErrorBoundary extends React.Component<
   ErrorBoundaryState
 > {
   state = { hasError: false };
+
+  static defaultProps = {
+    fallback: <p>Something went wrong!</p>,
+  };
 
   static getDerivedStateFromError(error: Error) {
     return {
