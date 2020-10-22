@@ -1,3 +1,5 @@
+/**@jsx jsx */
+import { jsx, css } from '@emotion/core';
 import * as React from 'react';
 
 type ErrorBoundaryProps = {
@@ -15,7 +17,15 @@ export class ErrorBoundary extends React.Component<
   state = { hasError: false };
 
   static defaultProps = {
-    fallback: <p>Something went wrong!</p>,
+    fallback: (
+      <p
+        css={css`
+          color: #ff5555;
+        `}
+      >
+        Something went wrong!
+      </p>
+    ),
   };
 
   static getDerivedStateFromError(error: Error) {

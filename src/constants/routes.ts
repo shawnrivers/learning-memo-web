@@ -48,6 +48,10 @@ export const learningReactRoutes: Route[] = [
     name: 'Suspense',
   },
   {
+    to: '/react/error',
+    name: 'Error Handling',
+  },
+  {
     to: '/react/ref',
     name: 'Ref',
   },
