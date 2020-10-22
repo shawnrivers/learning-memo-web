@@ -10,7 +10,7 @@ import {
   fetchPostsRejectData,
   Post,
   Resource,
-} from './utils/fakeAPI';
+} from '../../../utils/fakeAPI';
 
 const TextToLoadLazy = React.lazy(() => import('./components/TextToLoad'));
 

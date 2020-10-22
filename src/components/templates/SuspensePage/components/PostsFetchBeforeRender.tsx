@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { fetchPostsData } from '../utils/fakeAPI';
+import { fetchPostsData } from '../../../../utils/fakeAPI';
 
 const resource = fetchPostsData();
 
