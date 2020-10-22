@@ -4,7 +4,7 @@ import { StyledButton } from '../../../atoms/styled/StyledButton';
 import { TopicPage } from '../../TopicPage';
 import { PostsFetchAfterRender } from './components/PostsFetchAfterRender';
 import { PostsFetchBeforeRender } from './components/PostsFetchBeforeRender';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { ErrorBoundary } from '../../../atoms/ErrorBoundary';
 import {
   fetchPostsData,
   fetchPostsRejectData,
