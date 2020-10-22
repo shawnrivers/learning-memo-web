@@ -1,8 +1,8 @@
 /**@jsx jsx */
 import { jsx, css } from '@emotion/core';
 import * as React from 'react';
-import { TopicPage } from '../TopicPage';
-import { BLUE_0, GRAY_0 } from '../../../constants/colors';
+import { TopicPage } from '../../TopicPage';
+import { BLUE_0, GRAY_0 } from '../../../../constants/colors';
 import { useIntersectionObserver } from './hooks/useIntersectionObserver';
 
 export const IntersectionObserverPage: React.FC = () => {

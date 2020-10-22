@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TopicPage } from '../TopicPage';
+import { TopicPage } from '../../TopicPage';
 import { AutoFocusTextInputClass } from './components/class';
 import { AutoFocusTextInputFunction } from './components/function';
 

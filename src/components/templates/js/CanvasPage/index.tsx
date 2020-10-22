@@ -1,8 +1,8 @@
 /**@jsx jsx */
 import { jsx, css } from '@emotion/core';
 import * as React from 'react';
-import { StyledButton } from '../../atoms/styled/StyledButton';
-import { TopicPage } from '../TopicPage';
+import { StyledButton } from '../../../atoms/styled/StyledButton';
+import { TopicPage } from '../../TopicPage';
 import { useDrawAnimationCanvas } from './hooks/useDrawAnimationCanvas';
 import { useDrawBasicCanvas } from './hooks/useDrawBasicCanvas';
 import { degToRad } from './utils/math';

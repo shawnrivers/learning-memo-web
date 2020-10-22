@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TopicPage } from '../TopicPage';
+import { TopicPage } from '../../TopicPage';
 import { CounterController } from './components/CounterController';
 import { CounterDisplay } from './components/CounterDisplay';
 import { DemoContextProvider } from './context';

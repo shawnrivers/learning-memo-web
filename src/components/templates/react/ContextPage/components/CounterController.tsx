@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyledButton } from '../../../atoms/styled/StyledButton';
+import { StyledButton } from '../../../../atoms/styled/StyledButton';
 import { DemoContext } from '../context';
 
 export const CounterController: React.FC<{

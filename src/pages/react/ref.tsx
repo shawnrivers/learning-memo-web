@@ -1,3 +1,3 @@
-import { RefPage } from '../../components/templates/RefPage';
+import { RefPage } from '../../components/templates/react/RefPage';
 
 export default RefPage;

@@ -1,3 +1,3 @@
-import { CanvasPage } from "../../components/templates/CanvasPage";
+import { CanvasPage } from "../../components/templates/js/CanvasPage";
 
 export default CanvasPage;
