@@ -36,6 +36,10 @@ export const learningReactRoutes: Route[] = [
     name: 'useEffect',
   },
   {
+    to: '/react/fetch',
+    name: 'Data Fetching',
+  },
+  {
     to: '/react/rendering',
     name: 'Rendering',
   },
