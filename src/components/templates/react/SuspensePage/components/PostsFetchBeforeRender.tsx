@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { fetchPostsData } from '../../../../../utils/fakeAPI';
+import { fetchPostsResource } from '../../../../../utils/fakeAPI';
 
-const resource = fetchPostsData();
+const resource = fetchPostsResource();
 
 export const PostsFetchBeforeRender: React.FC = () => {
   const posts = resource.read();

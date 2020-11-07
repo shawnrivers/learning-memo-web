@@ -38,7 +38,7 @@ export type Post = {
 };
 
 export function fetchPosts(): Promise<Post[]> {
-  console.log('fetch posts...');
+  console.log('fetching posts...');
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log('fetched posts');
@@ -61,7 +61,7 @@ export function fetchPosts(): Promise<Post[]> {
 }
 
 export function fetchPostsReject(): Promise<Post[]> {
-  console.log('fetch posts...');
+  console.log('fetching posts...');
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log('rejected posts');
@@ -79,12 +79,12 @@ export function fetchProfileData() {
   };
 }
 
-export function fetchPostsData() {
+export function fetchPostsResource() {
   const promise = fetchPosts();
   return wrapPromise(promise);
 }
 
-export function fetchPostsRejectData() {
+export function fetchPostsRejectResource() {
   const promise = fetchPostsReject();
   return wrapPromise(promise);
 }

@@ -6,8 +6,8 @@ import { PostsFetchAfterRender } from './components/PostsFetchAfterRender';
 import { PostsFetchBeforeRender } from './components/PostsFetchBeforeRender';
 import { ErrorBoundary } from '../../../atoms/ErrorBoundary';
 import {
-  fetchPostsData,
-  fetchPostsRejectData,
+  fetchPostsResource,
+  fetchPostsRejectResource,
   Post,
   Resource,
 } from '../../../../utils/fakeAPI';
@@ -22,13 +22,13 @@ export const SuspensePage: React.FC = () => {
   >();
 
   React.useEffect(() => {
-    const resource = fetchPostsData();
+    const resource = fetchPostsResource();
     setPostsOnMountResource(resource);
   }, []);
 
   const [postsResource, setPostsResource] = React.useState<Resource<Post[]>>();
   const handleLoadData = React.useCallback(() => {
-    const resource = fetchPostsData();
+    const resource = fetchPostsResource();
     setPostsResource(resource);
   }, [setPostsResource]);
 
@@ -36,7 +36,7 @@ export const SuspensePage: React.FC = () => {
     Resource<Post[]>
   >();
   const handleLoadRejectData = React.useCallback(() => {
-    const resource = fetchPostsRejectData();
+    const resource = fetchPostsRejectResource();
     setPostsRejectResource(resource);
   }, [setPostsRejectResource]);
 
