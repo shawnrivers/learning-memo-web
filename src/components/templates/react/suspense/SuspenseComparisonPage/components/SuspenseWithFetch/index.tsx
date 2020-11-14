@@ -20,17 +20,23 @@ const Posts: React.FC<{
   );
 };
 
-export const SuspenseWithFetch: React.FC = () => {
+const PostsContainer: React.FC = () => {
   const postsResource = React.useMemo(() => fetchPostsResource(), []);
 
   return (
+    <DataContainer>
+      <React.Suspense fallback={<p>Loading...</p>}>
+        <Posts resource={postsResource} />
+      </React.Suspense>
+    </DataContainer>
+  );
+};
+
+export const SuspenseWithFetch: React.FC = () => {
+  return (
     <section>
       <h2>Suspense with fetch API</h2>
-      <DataContainer>
-        <React.Suspense fallback={<p>Loading...</p>}>
-          <Posts resource={postsResource} />
-        </React.Suspense>
-      </DataContainer>
+      <PostsContainer />
     </section>
   );
 };

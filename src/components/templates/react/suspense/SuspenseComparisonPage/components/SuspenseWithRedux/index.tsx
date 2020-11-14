@@ -12,9 +12,9 @@ import { ReduxStoreProvider } from './store/context';
 import { State } from './store/reducer';
 
 const Posts: React.FC<{
-  usePosts: () => Post[];
+  getPosts: () => Post[];
 }> = (props) => {
-  const posts = props.usePosts();
+  const posts = props.getPosts();
 
   return (
     <ul>
@@ -25,17 +25,23 @@ const Posts: React.FC<{
   );
 };
 
-const PostsSection: React.FC = () => {
-  const usePosts = usePostsResource();
+const PostsContainer: React.FC = () => {
+  const getPosts = usePostsResource();
 
+  return (
+    <DataContainer>
+      <React.Suspense fallback={<p>Loading...</p>}>
+        <Posts getPosts={getPosts} />
+      </React.Suspense>
+    </DataContainer>
+  );
+};
+
+const PostsSection: React.FC = () => {
   return (
     <section>
       <h2>Suspense with Redux</h2>
-      <DataContainer>
-        <React.Suspense fallback={<p>Loading...</p>}>
-          <Posts usePosts={usePosts} />
-        </React.Suspense>
-      </DataContainer>
+      <PostsContainer />
     </section>
   );
 };
