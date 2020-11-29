@@ -101,6 +101,10 @@ export const learningCssRoutes: Route[] = [
     to: '/css/float',
     name: 'Float',
   },
+  {
+    to: '/css/sizing',
+    name: 'Sizing',
+  },
 ];
 
 export const learningNextRoutes: Route[] = [
