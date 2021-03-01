@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route } from '../../constants/routes';
+import { Route } from '../../routes';
 import { HomeButton } from '../atoms/buttons/HomeButton';
 import { StyledLink } from '../atoms/styled/StyledLink';
 import { Layout } from './Layout';

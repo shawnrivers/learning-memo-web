@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledLink } from '../components/atoms/styled/StyledLink';
 import { Layout } from '../components/templates/Layout';
-import { homeRoutes } from '../constants/routes';
+import { homeRoutes } from '../routes';
 
 const HomePage: React.FC = () => {
   return (

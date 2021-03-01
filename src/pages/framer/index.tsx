@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ProjectPage } from '../../components/templates/ProjectPage';
-import { learningFramerMotionRoutes } from '../../constants/routes';
+import { learningFramerMotionRoutes } from '../../routes';
 
 const LearningFramerMotionPage: React.FC = () => {
   return (
