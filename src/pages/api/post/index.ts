@@ -2,13 +2,15 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import nc from 'next-connect';
 import { fakePosts, Post } from '../../../data/posts';
 
-type Response = {
+export type GetPostsResponse = {
   data: Post[];
 };
 
-const handler = nc<NextApiRequest, NextApiResponse<Response>>().get(
+const handler = nc<NextApiRequest, NextApiResponse<GetPostsResponse>>().get(
   (_, res) => {
-    res.json({ data: fakePosts });
+    setTimeout(() => {
+      res.json({ data: fakePosts });
+    }, 2000);
   }
 );
 

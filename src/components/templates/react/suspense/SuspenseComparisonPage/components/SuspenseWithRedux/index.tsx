@@ -37,19 +37,13 @@ const PostsContainer: React.FC = () => {
   );
 };
 
-const PostsSection: React.FC = () => {
-  return (
-    <section>
-      <h2>Suspense with Redux</h2>
-      <PostsContainer />
-    </section>
-  );
-};
-
 export const SuspenseWithRedux: React.FC = () => {
   return (
     <ReduxStoreProvider>
-      <PostsSection />
+      <section>
+        <h2>Suspense with Redux</h2>
+        <PostsContainer />
+      </section>
     </ReduxStoreProvider>
   );
 };

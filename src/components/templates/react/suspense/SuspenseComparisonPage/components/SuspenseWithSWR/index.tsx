@@ -1,7 +1,8 @@
 import * as React from 'react';
 import useSWR from 'swr';
-import { fetchPosts, Post } from '../../../../../../../utils/fakeAPI';
+import { Post } from '../../../../../../../data/posts';
 import { DataContainer } from '../../../../../../atoms/DataContainer';
+import { fetchPosts } from '../../utils/fetchPosts';
 
 const Posts: React.FC<{
   getPosts: () => Post[];
