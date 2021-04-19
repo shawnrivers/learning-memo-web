@@ -130,4 +130,8 @@ export const learningHTMLRoutes: Route[] = [
     to: '/html/table',
     name: 'Table',
   },
+  {
+    to: '/html/form',
+    name: 'Form',
+  },
 ];
